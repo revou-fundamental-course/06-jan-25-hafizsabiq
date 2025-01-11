@@ -3,15 +3,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hafiz Sabiqulhaq's Portfolio</title>
-    <link rel="stylesheet" href="06-jan-25-hafizsabiq\css\style.css">
-    <script src="06-jan-25-hafizsabiq\js\script.js" defer></script>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\script.js" defer></script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <!-- Logo -->
         <div class="logo-icon">
-        <img src="https://s3-ap-southeast-1.amazonaws.com/revou-blog/2019/12/Logo-RevoU-5.png" alt="Logo" />
+        <img src="https://s3-ap-southeast-1.amazonaws.com/revou-blog/2019/12/Logo-RevoU-5.png" alt="Logo" style="
+            width: 50px;
+            height:50px" />
         </div>
 
         <!-- Navigation -->
@@ -19,7 +21,7 @@
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#works">Works</a>
-        <a href="#message" class="message">Message Me</a>
+        <a href="#message" class= "CTA">Message Me</a>
         </nav>
     </header>
 
@@ -27,24 +29,26 @@
     <main>
         <!-- Home -->
         <section id = "home">
-            <h1>Hi <span ide = "user">User</span>,Welcome to my portfolio website</h1>
+            <h1>Hi <span id = "user">User</span>,<br>
+                Welcome to my portfolio website
+            </h1>
             <p>Lorem ipsum sit amet</p>
-            <div>Slides</div>
+            <div class = "slides"> slides </div>
         </section>
         
         <!-- About Me -->
-        <section>
+        <section id = "about">
             <h1>About Me</h1>
 
         </section>
 
-        <!-- Portfolio -->
-        <section>
+        <!-- Works -->
+        <section id = "works">
             <h1>Works</h1>
         </section>
         
         <!-- Message Me -->
-        <section>
+        <section id = "message">
             <h1>Message Me</h1>
             <form>
                 <div class="form-group">
@@ -63,8 +67,8 @@
                   <label for="female">Perempuan</label>
                 </div>
                 <div class="form-group">
-                  <label for="message">Pesan:</label>
-                  <textarea id="message" name="message" placeholder="Pesan"></textarea>
+                  <label for="message-content">Pesan:</label>
+                  <textarea id="text area" name="text area" placeholder="Pesan"></textarea>
                 </div>
                 <button type="submit">Submit</button>
               </form>
