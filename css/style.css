@@ -1,5 +1,6 @@
 /*body styling */
 body {
+    margin: 0px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
@@ -47,7 +48,7 @@ nav a:hover {
 
 /* Main content styling */
 main {
-    margin: 20px 0;
+    margin: 40px;
 }
 
 .slides {
@@ -63,8 +64,6 @@ main {
 .form-section {
     display: flex;
     flex-direction: row;
-    margin: 20px 0;
-    padding: 20px;
     gap: 20px;
 }
 
@@ -79,14 +78,39 @@ form {
     margin-top: 15px;
 }
   
-.form-group {
-    margin-bottom: 15px;
+#userForm {
     display: flex;
-    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
 }
 
 label {
-    width: 120px;
+    min-width: 136px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.radio-group {
+    display: flex;
+    gap: 8px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 input, textarea, button {
@@ -101,6 +125,12 @@ textarea {
     resize: none;
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 button {
     width: 100%;
     background-color: #f0f0f0;
@@ -108,20 +138,17 @@ button {
 }
 
 /* Preview Message */
-/* .preview-message {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    width: 100%;
-    height: 100%;
-} */
+.preview-message {  
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    border-radius: 10px;
+}  
+
 
 /* Footer styling */
 footer {
-    color: #fff;
+    background-color: #302d5e;
+    color:#fff;
     text-align: center;
     padding: 10px 0;
     bottom: 0;
