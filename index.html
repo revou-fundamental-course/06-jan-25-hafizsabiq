@@ -12,14 +12,16 @@
     <header>  
         <div class="logo-icon">  
             <img src="assets/Logo AquaticZer0.png" alt="Logo" style="width: 50px; height:50px" />  
-        </div>  
-        <nav>  
-            <a href="#home">Home</a>  
-            <a href="#about">About Me</a>  
-            <a href="#works">Works</a>  
-            <a href="#message" class="CTA">Message Me</a>  
-            <button id="Change Name">Change Name</button>  
-        </nav>  
+        </div>
+        <div class="nav-button">
+          <nav>  
+              <a href="#home">Home</a>  
+              <a href="#about">About Me</a>  
+              <a href="#works">Works</a>  
+              <a href="#message" class="CTA">Message Me</a>  
+          </nav>
+          <button id="Change Name">Change Name</button>
+        </div>
     </header>  
   
     <!-- Main content -->  
@@ -43,37 +45,37 @@
             <div class="form-section">  
                 <form id="userForm">  
                     <div class="form-group">  
-                        <label for="sender-name">Nama:</label>
+                        <label for="sender-name">Name:</label>
                         <div class="input-group">
                           <input type="text" id="sender-name" name="sender-name" placeholder="Nama">  
                           <span class="error-message" id="name-error"></span>  
                         </div>
                     </div>
                     <div class="form-group">  
-                        <label for="birthdate">Tanggal Lahir:</label>
+                        <label for="birthdate">Birthdate:</label>
                         <div class="input-group">
                           <input type="date" id="birthdate" name="birthdate">  
                           <span class="error-message" id="birthdate-error"></span>
                         </div>
                     </div>  
                     <div class="form-group">  
-                        <label>Jenis Kelamin:</label>
+                        <label>Gender:</label>
                         <div class="input-group">
                           <div class="radio-group">
                             <div class="radio-option">
                               <input type="radio" id="male" name="gender" value="male">  
-                              <label for="male">Laki-Laki</label>
+                              <label for="male">Male</label>
                             </div>
                             <div class="radio-option">
                               <input type="radio" id="female" name="gender" value="female">  
-                              <label for="female">Perempuan</label>
+                              <label for="female">Female</label>
                             </div>
                           </div> 
                           <span class="error-message" id="gender-error"></span>
                         </div>
                     </div>  
                     <div class="form-group">  
-                        <label for="message-content">Pesan:</label>  
+                        <label for="message-content">Message:</label>  
                         <div class="input-group">
                           <textarea id="message-content" name="message-content" placeholder="Pesan"></textarea>  
                           <span class="error-message" id="message-error"></span>
@@ -82,10 +84,22 @@
                     <button type="submit">Submit</button>  
                 </form>  
                 <div class="preview-message">
-                    <p>Name: <span id="sender-full-name"></span></p>  
-                    <p>Birthdate: <span id="sender-birth-date"></span></p>  
-                    <p>Gender: <span id="sender-gender"></span></p>  
-                    <p>Message: <span id="sender-messages"></span></p>  
+                  <div class="preview-item">
+                    <label>Name:</label>
+                    <span id="sender-full-name"></span>
+                  </div>
+                  <div class="preview-item">
+                    <label>Birthdate:</label>
+                    <span id="sender-birth-date"></span>  
+                  </div>
+                  <div class="preview-item">
+                    <label>Gender:</label>
+                    <span id="sender-gender"></span>  
+                  </div>
+                  <div class="preview-item">
+                    <label>Message:</label>
+                    <span id="sender-messages"></span>  
+                  </div>
                 </div>  
             </div>             
         </section>  
