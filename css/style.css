@@ -255,3 +255,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Menyembunyikan section yang muncul karena plugin */
+#loom-companion-mv3 {  
+    display: none !important;  
+}  
