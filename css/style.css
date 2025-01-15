@@ -107,6 +107,10 @@ main {
     margin: 40px;
 }
 
+section {
+    min-height: 500px;
+}
+
 #home {
     display: flex;
     flex-direction: column;
