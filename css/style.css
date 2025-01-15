@@ -65,6 +65,7 @@ nav a:hover {
     align-items: center;  
 }  
   
+/* Header responsive */
 @media (max-width: 600px) {  
     header {  
         flex-direction: column;  
