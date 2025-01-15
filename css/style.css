@@ -26,44 +26,116 @@ header {
 }
 
 /* Navigation styling */
-nav {
-    margin: 20px 0;
-    text-align: center;
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+header {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 10px;  
+}  
+  
+.logo-icon img {  
+    width: 50px;  
+    height: 50px;  
+}  
+  
+nav {  
+    margin: 20px 0;  
+    text-align: center;  
+    display: flex;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+  
+nav a {  
+    color: #000;  
+    text-decoration: none;  
+    padding: 5px 10px;  
+    border-right: 1px solid #ccc;  
+    border-left: 1px solid #ccc;  
+}  
+  
+nav a:hover {  
+    background: #333;  
+    color: #fff;  
+}  
+  
+.nav-button {  
+    display: flex;  
+    gap: 10px;  
+    align-items: center;  
+}  
+  
+@media (max-width: 600px) {  
+    header {  
+        flex-direction: column;  
+        align-items: center;  
+    }  
+  
+    .nav-button {  
+        flex-direction: column;
+        margin-top: 10px;  
+        width: 100%;  
+        justify-content: flex-start;  
+    }  
+  
+    nav {  
+        flex-direction: column;  
+        align-items: center;  
+        width: 100%;  
+        border-right: none;  
+        border-left: none; 
+    }  
+  
+    nav a {  
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;  
+        padding: 10px;  
+        width: 100%;  
+        text-align: left;  
+    }  
+  
+    nav a:hover {  
+        background: #333;  
+        color: #fff;  
+    }  
+}  
 
-nav a {
-    color: #000;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-}
-
-nav a:hover {
-    background: #333;
-    color: #fff;
-}
-
-.nav-button {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
 
 /* Main content styling */
 main {
     margin: 40px;
 }
 
-.slides {
+#home {
     display: flex;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Banner Auto Slides */
+.slides {  
+    display: flex;  
+    flex-direction: column;  
+    align-content: center;  
+    justify-content: center;  
+    align-items: center;  
+    height: 500px;  
+}  
+  
+.img-slideshow {    
+    width: 100%;  
+    height: auto;  
+    max-height: 500px;  
+    display: block;  
+    object-fit: cover; 
+}  
+
+.slide-button {
+    display: flex;
+    gap: 10px;
     align-items: center;
-    height: 578px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 
