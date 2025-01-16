@@ -13,8 +13,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 2;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -68,10 +70,25 @@ nav a:hover {
     margin: 4px 0;
 }
 
+.close {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.close div {
+    width: 25px;
+    height: 3px;
+    background-color: #040d1e;
+    margin: 4px 0;
+}
 
 /* Main content styling */
 main {
-    margin: 40px;
+    margin-top: 120px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
     display: flex;
     gap: 60px;
     flex-direction: column;
@@ -120,6 +137,7 @@ p {
 
 /* icon styling */
 i {
+    padding: 8px;
     color: #040d1e;
 }
 
@@ -364,7 +382,7 @@ footer {
     background-color: #f8f9Fc;
     padding: 10px;
     border: #ccc;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .footer-content {
@@ -391,7 +409,10 @@ footer {
 /* Mobile responsive */  
 @media (max-width: 600px) {  
     main {  
-        margin: 20px;  
+        margin-top: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;  
     }
 
     header {  
@@ -425,7 +446,7 @@ footer {
   
     nav a {
         padding: 20px;  
-        width: 100%;  
+        width: auto;  
         text-align: left;  
     }  
   
@@ -437,12 +458,25 @@ footer {
     .hamburger {  
         display: flex;  
     } 
+
+    .close {  
+        display: none;  
+    }
   
     #name:hover {
-        color: aqua;
+        color: inherit;
+    }
+
+    .project-list {  
+        flex-direction: column;  
     }
 
     .form-section {  
         flex-direction: column;  
     }  
+
+    .footer-content {  
+        flex-direction: column; 
+        gap: 10px; 
+    }
 }  

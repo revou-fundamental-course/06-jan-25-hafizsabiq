@@ -43,12 +43,13 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });  
 });  
 
-const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
 
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
 
 //Banner Auto Slide
 var slideIndex = 1;  
