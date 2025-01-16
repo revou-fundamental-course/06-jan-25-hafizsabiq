@@ -17,7 +17,7 @@ function nameInput() {
 window.onload = nameInput;
 
 // Tombol ganti nama
-document.getElementById("Change Name").addEventListener("click", function () {
+document.getElementById("change-name").addEventListener("click", function () {
     nameInput();
 });
 

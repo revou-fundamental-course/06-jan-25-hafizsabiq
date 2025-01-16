@@ -25,14 +25,7 @@ header {
     height: 50px;
 }
 
-/* Navigation styling */
-header {  
-    display: flex;  
-    justify-content: space-between;  
-    align-items: center;  
-    padding: 10px;  
-}  
-  
+/* Navigation styling */  
 .logo-icon img {  
     width: 50px;  
     height: 50px;  
@@ -64,43 +57,6 @@ nav a:hover {
     gap: 10px;  
     align-items: center;  
 }  
-  
-/* Header responsive */
-@media (max-width: 600px) {  
-    header {  
-        flex-direction: column;  
-        align-items: center;  
-    }  
-  
-    .nav-button {  
-        flex-direction: column;
-        margin-top: 10px;  
-        width: 100%;  
-        justify-content: flex-start;  
-    }  
-  
-    nav {  
-        flex-direction: column;  
-        align-items: center;  
-        width: 100%;  
-        border-right: none;  
-        border-left: none; 
-    }  
-  
-    nav a {  
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;  
-        padding: 10px;  
-        width: 100%;  
-        text-align: left;  
-    }  
-  
-    nav a:hover {  
-        background: #333;  
-        color: #fff;  
-    }  
-}  
-
 
 /* Main content styling */
 main {
@@ -147,6 +103,7 @@ section {
 /* Styling Section form */
 .form-section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
 }
@@ -159,10 +116,8 @@ section {
 
 /* Form styling */
 form {
+    min-width: 300px;
     margin-top: 15px;
-}
-  
-#userForm {
     display: flex;
     gap: 8px;
     border-radius: 10px;
@@ -233,6 +188,7 @@ button:hover {
 
 /* Preview Message */
 .preview-message {  
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
@@ -259,4 +215,44 @@ footer {
 /* Menyembunyikan section yang muncul karena plugin */
 #loom-companion-mv3 {  
     display: none !important;  
+}  
+
+/* Mobile responsive */
+@media (max-width: 600px) {  
+    header {  
+        flex-direction: column;  
+        align-items: center;  
+    }  
+  
+    .nav-button {  
+        flex-direction: column;
+        margin-top: 10px;  
+        width: 100%;  
+        justify-content: flex-start;  
+    }  
+  
+    nav {  
+        flex-direction: column;  
+        align-items: stretch;  
+        width: 100%;  
+        border-right: none;  
+        border-left: none; 
+    }  
+  
+    nav a {  
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;  
+        padding: 10px;  
+        width: 100%;  
+        text-align: left;  
+    }  
+  
+    nav a:hover {  
+        background: #333;  
+        color: #fff;  
+    }  
+
+    .form-section {
+        flex-direction: column;
+    }
 }  
