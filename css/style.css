@@ -18,7 +18,7 @@ header {
     left: 0;
     right: 0;
     z-index: 2;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .logo-icon {
@@ -469,11 +469,24 @@ footer {
 
     .project-list {  
         flex-direction: column;  
+        flex-wrap: nowrap;
+    }
+
+    .project-description {  
+        min-width: 0;  
+    }
+
+    form {  
+        min-width: 0;  
     }
 
     .form-section {  
         flex-direction: column;  
     }  
+
+    .preview-message {  
+        min-width: 0;  
+    }
 
     .footer-content {  
         flex-direction: column; 
