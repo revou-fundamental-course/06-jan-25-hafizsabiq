@@ -118,6 +118,15 @@ p {
     margin: unset;
 }
 
+/* icon styling */
+i {
+    color: #040d1e;
+}
+
+i:hover {
+    color: #2d75f8;
+}
+
 /* Visitor name styling */
 #name {
     cursor: pointer;
@@ -361,12 +370,17 @@ footer {
 .footer-content {
     display: flex;
     width: 100%;
-    padding: 10px;
-    align-items: center; 
-    justify-content: center;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
     background-color: #fff;
     border: #ccc;
     border-radius: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
 }
 
 /* Menyembunyikan section yang muncul karena plugin */
