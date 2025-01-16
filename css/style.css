@@ -1,14 +1,14 @@
 /*body styling */
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: "Lexend Deca", sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fefdff;
 }
 
 /* Header styling */
 header {
-    background-color: #f4f4f4;
+    background-color: #fefdff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 2;
-    border-bottom: 1px solid #ccc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .logo-icon {
@@ -25,38 +25,49 @@ header {
     height: 50px;
 }
 
-/* Navigation styling */  
-.logo-icon img {  
-    width: 50px;  
-    height: 50px;  
-}  
-  
-nav {  
-    margin: 20px 0;  
-    text-align: center;  
-    display: flex;  
-    border: 1px solid #ccc;  
-    border-radius: 5px;  
-}  
-  
-nav a {  
-    color: #000;  
-    text-decoration: none;  
-    padding: 5px 10px;  
-    border-right: 1px solid #ccc;  
-    border-left: 1px solid #ccc;  
-}  
-  
-nav a:hover {  
-    background: #333;  
-    color: #fff;  
-}  
-  
-.nav-button {  
-    display: flex;  
-    gap: 10px;  
-    align-items: center;  
-}  
+.logo-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #040d1e;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    /* background: #034ed4; */
+    color: #034ed4;
+    border-bottom: 2px solid #034ed4;
+}
+
+.nav-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #040d1e;
+    margin: 4px 0;
+}
+
 
 /* Main content styling */
 main {
@@ -71,6 +82,62 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* Heading and paragraph styling */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: unset;
+}
+
+p {
+    font-size: 16px;
+    margin: auto;
+    margin: unset;
+}
+
+/* Visitor name styling */
+#name {
+    cursor: pointer;
+    color: #2d75f8;
+}
+
+#name:hover {
+    color: #034ed4;
+}
+
+/* Name Hover Tooltip  */
+.tooltip {  
+    position: relative; 
+    cursor: pointer;  
+}  
+
+.tooltip::after {  
+    content: attr(data-tooltip); 
+    position: absolute;  
+    bottom: 100%; 
+    left: 100%;
+    transform: translate(-5px); 
+    font-size: 12px;
+    background-color: #034ed4; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    white-space: nowrap; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s;  
+}  
+
+.tooltip:hover::after {  
+    opacity: 1; 
+    visibility: visible; 
 }
 
 /* Banner Auto Slides */
@@ -88,7 +155,8 @@ section {
     height: auto;  
     max-height: 500px;  
     display: block;  
-    object-fit: cover; 
+    object-fit: cover;
+    border-radius: 20px; 
 }  
 
 .slide-button {
@@ -114,6 +182,56 @@ section {
     box-sizing: border-box;
 }
 
+/* Works section styling */
+#works {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f8f9Fc;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 11%);
+}
+
+.project-image {  
+    width: 100%;
+    height: auto;  
+    display: flex;   
+    justify-content: center;
+    align-items: center; 
+}  
+  
+.project-image img {  
+    width: auto;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 10px; 
+} 
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 300px;
+    gap: 8px;
+}
+
 /* Form styling */
 form {
     min-width: 300px;
@@ -129,6 +247,7 @@ form {
     align-items: flex-start;
     align-content: center;
     justify-content: flex-start;
+    gap: 8px;
 }
 
 label {
@@ -165,24 +284,25 @@ textarea {
 }
 
 .error-message {
-    color: red;
+    color: #d31010;
     font-size: 12px;
     margin-top: 5px;
 }
 
 button {
+    font-family: "Lexend Deca", sans-serif;
     width: fit-content;
     height: fit-content;
-    padding: 10px 16px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f0f0f0;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #040d1e;
     cursor: pointer;
 }
 
 button:hover {
-    background: #333;
+    background: #034ed4;
     color: #fff;
 }
 
@@ -204,12 +324,28 @@ button:hover {
 
 /* Footer styling */
 footer {
-    background-color: #302d5e;
-    color:#fff;
-    text-align: center;
-    padding: 10px 0;
-    bottom: 0;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.footer-container {
+    display: flex;
     width: 100%;
+    background-color: #f8f9Fc;
+    padding: 10px;
+    border: #ccc;
+    border-radius: 40px;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center; 
+    justify-content: center;
+    background-color: #fff;
+    border: #ccc;
+    border-radius: 20px;
 }
 
 /* Menyembunyikan section yang muncul karena plugin */
@@ -217,42 +353,57 @@ footer {
     display: none !important;  
 }  
 
-/* Mobile responsive */
+/* Mobile responsive */  
 @media (max-width: 600px) {  
     header {  
-        flex-direction: column;  
+        display: flex;  
         align-items: center;  
+        z-index: 3;  
     }  
   
     .nav-button {  
-        flex-direction: column;
-        margin-top: 10px;  
-        width: 100%;  
+        flex-direction: column;  
         justify-content: flex-start;  
     }  
   
     nav {  
-        flex-direction: column;  
-        align-items: stretch;  
+        display: none;
+        position: absolute;
+    }  
+  
+    nav.active {  
+        top: 50px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute; 
         width: 100%;  
-        border-right: none;  
-        border-left: none; 
+        background-color: #fefdff;  
+        border-bottom: 1px solid #ccc;  
+        z-index: 1;  
     }  
   
     nav a {  
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;  
+        border: 1px solid #ccc;  
         padding: 10px;  
         width: 100%;  
         text-align: left;  
     }  
   
     nav a:hover {  
-        background: #333;  
-        color: #fff;  
+        background: transparent;  
+        color: inherit;  
     }  
-
-    .form-section {
-        flex-direction: column;
+  
+    .hamburger {  
+        display: flex;  
+    } 
+  
+    #name:hover {
+        color: aqua;
     }
+
+    .form-section {  
+        flex-direction: column;  
+    }  
 }  

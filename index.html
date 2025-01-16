@@ -4,49 +4,83 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Hafiz Sabiqulhaq's Portfolio</title>  
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
     <script src="js/script.js" defer></script>  
 </head>  
 <body>  
     <!-- Header -->  
-    <header>  
-        <div class="logo-icon">  
-            <img src="assets/Logo AquaticZer0.png" alt="Logo" style="width: 50px; height:50px" />  
-        </div>
-        <div class="nav-button">
-          <nav>  
-              <a href="#home">Home</a>  
-              <a href="#about">About Me</a>  
-              <a href="#works">Works</a>  
-              <a href="#message" class="CTA">Message Me</a>  
+    <header>
+      <div class="logo-icon">
+        <a href="#home">
+          <img src="assets/Logo AquaticZer0.png" alt="Logo" style="width: 50px; height:50px" />
+        </a>
+      </div>
+      <div class="nav-button">
+          <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+          <nav id="menu">
+              <a href="#home">Home</a>
+              <a href="#works">Works</a>
+              <a href="#message" class="CTA">Message Me</a>
           </nav>
-          <button id="change-name">Change Name</button>
-        </div>
-    </header>  
+      </div>
+    </header> 
   
     <!-- Main content -->  
     <main>  
         <section id="home">  
-            <h1>Hi <span id="name">Visitor</span>,<br>Welcome to my portfolio website</h1>
+          <h1>Hi <span id="name" class="tooltip" data-tooltip="Change name?">Visitor</span>,
+          <br>Welcome to My Website</h1>
             <!-- Banner Auto Slide -->
             <div class="slides">  
               <img class="img-slideshow" src="assets\Day 2 - Checkout.png" />  
               <img class="img-slideshow" src="assets\Dribbble shot - Save Management App.png" />  
               <img class="img-slideshow" src="assets\Dribbble shot Momiji Studio - 1.png" />  
               <div class="slide-button">
-                <button onclick="plusDivs(-1)">Previous</button>  
-                <button onclick="plusDivs(1)">Next</button>  
+                <button onclick="plusDivs(-1)"><i class="fas fa-chevron-left"></i></button>  
+                <button onclick="plusDivs(1)"><i class="fas fa-chevron-right"></i></button>  
               </div>
             </div>  
-          
-        </section>  
-          
-        <section id="about">  
-            <h1>About Me</h1>  
-        </section>  
-  
+        </section> 
+        
+        <!-- Works section -->
         <section id="works">  
-            <h1>Works</h1>  
+         <h1>Works</h1>  
+          <div class="project-list">
+            <!-- Project 1 -->
+            <div class="project">  
+              <div class="project-image">  
+                  <img src="assets/DIAN Cover 2.png" alt="Project Dian" />  
+              </div>  
+              <div class="project-description">
+                  <h2>DIAN Redesign - Addressing Low Engagement and Retention on the Career Support Page</h2>  
+                  <p>Final project from the internship at MyEduSolve.</p>    
+              </div> 
+              <a href ="https://sabiqulhaq.notion.site/DIAN-Redesign-Addressing-Low-Engagement-and-Retention-on-the-Career-Support-Page-9708f65c1a2d4cac99d8aa790d442ff7?pvs=4"
+              target="_blank" rel="noopener noreferrer"> 
+                <button>Read More</button>
+              </a>
+            </div>  
+            <!-- Project 2 -->
+            <div class="project">  
+              <div class="project-image">  
+                  <img src="assets/Typography.png" alt="Project Gifood" /> <!-- Changed backslash to forward slash -->  
+              </div>  
+              <div class="project-description"> <!-- Corrected closing tag -->  
+                  <h2>Gifood’s Design System Documentation</h2>  
+                  <p>Personal design system project for a non-profit organization</p>  
+              </div>  
+              <a href ="https://sabiqulhaq.notion.site/Gifood-s-Design-System-Documentation-5baa589fec1a45ef8cc5534b0eb7ea52"
+              target="_blank" rel="noopener noreferrer">
+                <button>Read More</button> 
+              </a> 
+            </div>  
+          </div>
         </section>  
         
         <!-- Form section -->
@@ -124,8 +158,12 @@
         </section>  
     </main>  
       
-    <footer>  
-        <p>Created by Hafiz Sabiqulhaq</p>  
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <p>Hafiz Sabiqulhaq ©️ 2025</p>
+        </div>
+      </div>  
     </footer>  
 </body>  
 </html>  
